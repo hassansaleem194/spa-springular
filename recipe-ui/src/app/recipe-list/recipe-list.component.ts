@@ -25,4 +25,9 @@ export class RecipeListComponent implements OnInit {
     this.selectedRecipe = recipe;
   }
 
+  onDelete(recipe: any): void {
+    this.recipes = this.recipes.filter(obj => obj.id != recipe.id)
+    // TODO: Call backend and delete and list refresh here and remove line above
+  }
+
 }
